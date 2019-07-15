@@ -1,13 +1,20 @@
 package pl.sda;
 
-/**
- * Hello world!
- *
- */
+import java.util.Scanner;
+
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+
+        CurrencyExchange currencyExchange = new CurrencyExchange("https://api.exchangeratesapi.io/latest");
+
+        System.out.println(currencyExchange.getJSONData("PLN"));
+
+
+
+
+
     }
 }

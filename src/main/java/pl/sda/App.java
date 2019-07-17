@@ -1,19 +1,17 @@
 package pl.sda;
 
-import java.util.Scanner;
 
 
-public class App 
+public class App
 {
     public static void main( String[] args )
     {
+        Reader reader = new Reader("https://api.exchangeratesapi.io/latest", "PLN");
 
-        CurrencyExchange currencyExchange = new CurrencyExchange("https://api.exchangeratesapi.io/latest");
-
-        System.out.println(currencyExchange.getJSONData("PLN"));
-
-
-
+        reader.getJSONData();
+        System.out.println(reader.getJSONData());
+        reader.getData();
+        System.out.println(reader.getData());
 
 
     }

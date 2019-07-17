@@ -1,14 +1,19 @@
 package pl.sda.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.json.JSONPropertyName;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Rates {
-    private float cad;
+
+    private float CAD;
     private float HKD;
     private float ISK;
     private float PHP;
@@ -41,5 +46,7 @@ public class Rates {
     private float ILS;
     private float KRW;
     private float PLN;
+
+
 
 }

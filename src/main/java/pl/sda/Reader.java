@@ -2,10 +2,10 @@ package pl.sda;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.NoArgsConstructor;
 import org.apache.commons.io.IOUtils;
 import pl.sda.model.Currency;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.Charset;
@@ -27,8 +27,7 @@ public class Reader {
         data = "";
 
         try {
-            data = IOUtils.toString(new URL(finalUrl), Charset.forName("UTF-8"));
-            data = data.toLowerCase();
+            data = IOUtils.toString(new URL(finalUrl), Charset.forName("UTF-8")).toLowerCase();
         } catch (IOException e) {
             e.printStackTrace();
         }

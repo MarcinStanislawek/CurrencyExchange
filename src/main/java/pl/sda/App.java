@@ -1,6 +1,7 @@
 package pl.sda;
 
 
+import pl.sda.controller.Controller;
 
 public class App
 {
@@ -8,21 +9,20 @@ public class App
     {
         Controller controller = new Controller();
 
-        System.out.println("\n Write a code of currency which you want to exchange: ");
-        String base = controller.chooseBase();
+        System.out.println("\nWrite a code of currency which you want to exchange: ");
+        controller.chooseBase();
 
-        Reader reader = new Reader("https://api.exchangeratesapi.io/latest", base);
-        reader.getData();
+        System.out.println("\nWrite a code of currency you want to get: ");
+        controller.chooseFinalCurrency();
 
-        System.out.println("Write an amount of currency you want to exchange: ");
+        System.out.println(controller.getBase());
+        System.out.println(controller.getFinalCurrency());
+
+        System.out.println("\nWrite an amount of currency you want to exchange: ");
         controller.giveAmountOfCurrency();
 
-        System.out.println("PLN = " + controller.calculateResult());
 
 
-
-
-
-
+        System.out.println(controller.getResult());
     }
 }

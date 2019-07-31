@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.Charset;
 
+@NoArgsConstructor
 public class Reader {
 
     private String url;

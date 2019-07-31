@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -44,7 +45,6 @@ public class Rates {
     private float ILS;
     private float KRW;
     private float PLN;
-
 
 
 }
